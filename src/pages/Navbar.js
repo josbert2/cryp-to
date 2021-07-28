@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-
+import {
+   BrowserRouter as Router,
+   Switch,
+   Route,
+   Link
+ } from "react-router-dom"
 class Navbar extends Component {
    render() {
       return (
@@ -86,11 +91,11 @@ class Navbar extends Component {
 
                            
                            <div class="ml-4 relative flex-shrink-0 flex">
-                                 <div>
-                                    <a href="login.html" class="login"><button>LOGIN</button> </a>
+                                 <div class="text-gray-200">
+                                    <Link to="login" class="login"><button>LOGIN</button> </Link>
                                  </div>
-                                 <div class="">
-                                    <a href="" class="register"><button>REGISTER</button></a>
+                                 <div class="text-gray-200">
+                                    <Link to="register" class="register"><button>REGISTER</button></Link>
                                  </div>
 
                              

@@ -39,5 +39,62 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/CSSRulePlugin.min.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+        <script>
+            const scroller = new LocomotiveScroll({ el: document.querySelector("[data-scroll-container]"), smooth: !0 });
+        </script>-->
+        <script>
+          document.onreadystatechange = function () {
+            if (document.readyState == "interactive") {
+                    const Content = CSSRulePlugin.getRule(".contentwebgl:before"),
+                        h1 = document.querySelector("h1"),
+                        p = document.querySelector("p"),
+                        tl = gsap.timeline();
+                    tl.from(Content, { delay: 2, duration: 2, cssRule: { scaleX: 0 } }),
+                        tl.to(h1, { duration: 2, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100% )", y: "30px" }, "-=3"),
+                        tl.to(p, { duration: 4, clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100% )", y: "30px" }, "-=2");
+                    const updateSphere2 = (e) => {};
+                    let speed = 0,
+                        position = 0,
+                        rounded = 0,
+                        wrap = document.getElementById("rest");
+                    
+                    
+                
+                    const targets = document.querySelectorAll(".balances__row"),
+                        lazyLoad = (e) => {
+                            new IntersectionObserver(
+                                (e, t) => {
+                                    e.forEach((e) => {
+                                        if (e.isIntersecting) {
+                                            e.target.classList.add("fade"), t.disconnect();
+                                        }
+                                    });
+                                },
+                                { threshold: [0.7] }
+                            ).observe(e);
+                        };
+                    targets.forEach(lazyLoad);
+                    var item = document.querySelectorAll(".item__filter");
+                    for (let e = 0; e < item.length; e++) item[e].classList.add("open"), item[e].style.setProperty("transition-delay", 0.09 * e + "s");
+                    item = document.querySelectorAll(".item-c");
+                    for (let e = 0; e < item.length; e++) item[e].classList.add("open"), item[e].style.setProperty("transition-delay", 0.29 * e + "s");
+                    !(function () {
+                        document.addEventListener("mousemove", function (t) {
+                            let o = window.innerWidth / 2,
+                                n = window.innerHeight / 2,
+                                i = t.clientX,
+                                r = t.clientY,
+                                l = `${50 - 0.06 * (i - o)}% ${50 - 0.06 * (r - n)}%, ${50 - 0.02 * (i - o)}% ${50 - 0.02 * (r - n)}%, ${50 - 0.01 * (i - o)}% ${50 - 0.01 * (r - n)}%`;
+                            e.style.backgroundPosition = l;
+                        });
+                        const e = document.querySelector(".parallax");
+                    })();
+                  }
+}
+        </script>
   </body>
 </html>

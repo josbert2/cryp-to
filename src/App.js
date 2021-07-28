@@ -11,6 +11,7 @@ import {
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Reward from './pages/Reward';
 
 import NavBar from './pages/Navbar';
 
@@ -21,7 +22,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Switch>
-          <Route path="/a">
+          <Route path="/">
             <Home />
           </Route>
 
@@ -32,6 +33,12 @@ class App extends Component {
           <Route path="/login">
             <Login />
           </Route>
+
+          <Route path="/reward">
+            <Reward />
+          </Route>
+
+          
 
         </Switch>
       </div>
