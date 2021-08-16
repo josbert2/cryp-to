@@ -13,6 +13,8 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Reward from './pages/Reward';
 import Profile from './pages/Profile';
+import Portafolio from './pages/Portafolio';
+import LPortafolio from './pages/portafolioLogin';
 
 import NavBar from './pages/Navbar';
 
@@ -41,6 +43,15 @@ class App extends Component {
 
           <Route path="/profile">
             <Profile />
+          </Route>
+
+          <Route path="/portafolio">
+            <Portafolio />
+          </Route>
+
+
+          <Route path="/portafolio-login">
+            <LPortafolio />
           </Route>
         </Switch>
       </div>

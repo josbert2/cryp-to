@@ -279,7 +279,7 @@ class Profile extends Component {
                                             </a>
                                           </nav>
                                           <div class="tabs tabContent">
-                                                <div class="tab-item active" id="tab1" style={{ display: "block"; }}>
+                                                <div class="tab-item active" id="tab1" style={{ display: "block" }}>
                                                     <div class="grid grid-cols-3 gap-4">
                                                         <div class="col-span-2 ">
                                                             <Line data={data} options={options} />

@@ -322,3 +322,24 @@ color:#55efc4;
 .success-svg {
 color:#ff7675;
 }
+
+
+.av {
+  position: absolute;
+}
+.rv {
+  height: .25rem;
+}
+.nw {
+  display: none;
+}
+.nf {
+  border-top-width: 1px;
+}
+.ni {
+  border-style: dashed;
+}
+.tx {
+  --tw-border-opacity: 1;
+  border-color: rgba(51,54,58,var(--tw-border-opacity));
+}
